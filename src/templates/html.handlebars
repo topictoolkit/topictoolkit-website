@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html class="no-js {{ docs.page.meta.id }}">
+
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <title>
+    {{ docs.page.meta.title }}
+  </title>
+  <meta name="description" content="{{ docs.page.meta.description }}">
+  <meta name="keywords" content="{{ docs.page.meta.keywords }}">
+  <meta name="author" content="{{ docs.page.meta.author }}">
+  <meta name="viewport" content="width=device-width">
+  <meta property="og:title" content="{{ docs.page.meta.title }}" />
+  <meta property="og:url" content="{{site.itemRoot}}{{routePath}}/" />
+  <meta property="og:description" content="{{ docs.page.meta.description }}" />
+  <meta property="og:site_name" content="{{site.description}}" />
+  {{#if assets.img.[0]}}
+  <meta property="og:image" content="{{site.homePageUrl}}{{outputPath}}{{assets.img.[0]}}"  />
+  {{else}}
+  <meta property="og:image" content="{{site.itemRoot}}assets/images/logo.png" />
+  {{/if}}
+  <link rel="alternate" title="{{site.description}}" type="application/json"
+    href="{{site.feedUrl}}" />
+  <link rel="alternate" type="application/atom+xml" title="Blog" href="{{site.itemRoot}}feed.xml?type=blog" />
+  
+  <link href="/assets/favicon.png" rel="icon" type="image/png">
+
+  <link rel="stylesheet" href="/main.css" />
+
+  {{#each assets.css}}
+  <link rel="stylesheet" href="{{this}}" />
+  {{/each}}
+
+</head>
+
+<body>
+  <div id="top-bar">
+    <div class="logo">
+      {{{docs.logo.body}}}
+    </div>
+    <div class="main-nav">
+      {{{docs.main-nav.body}}}
+    </div>
+  </div>
+
+
+  <div id="page-content-container">
+    <div id="content-main">
+        {{{ pageContent }}}
+    </div>
+
+    <div class="main-nav bottom">
+      {{{docs.main-nav.body}}}
+    </div>
+
+    <div id="footer-bar">
+      {{docs.global-footer.body}}
+    </div>
+  </div>
+
+  {{#each assets.js}}
+  <script type="text/javascript" src="{{this}}"></script>
+  {{/each}}
+</body>
+
+</html>
