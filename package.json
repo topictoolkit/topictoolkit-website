@@ -1,6 +1,6 @@
 {
   "name": "topictoolkit-website",
-  "version": "1.0.0",
+  "version": "1.1.0",
   "description": "source for topictoolkit.com",
   "main": "index.js",
   "scripts": {
