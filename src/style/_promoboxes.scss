@@ -1,0 +1,23 @@
+.promoboxes {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    margin: 20px;
+  
+    .promobox {
+      flex: 1 1 300px;
+      margin: 10px;
+    }
+  }
+  
+  
+  .logoboxes {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+      margin: 20px;
+      .logobox {
+        flex: 1 1 300px;
+        margin: 20px;
+      }
+    }

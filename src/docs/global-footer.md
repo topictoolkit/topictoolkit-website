@@ -1,0 +1,1 @@
+Topic Toolkit is an independent project by [admataz](https://admataz.com) - &copy; 2020

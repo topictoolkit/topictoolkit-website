@@ -5,7 +5,11 @@
   "main": "index.js",
   "scripts": {
     "build:pages": "blockstatic -c ./build-config.json -s ./src/pages -o ./dist",
-    "dev:start": "static dist -p 3001",
+    "build:styles": "node-sass  ./src/style/main.scss ./dist/main.css",
+    "serve": "static dist -p 3001",
+    "build": "npm run build:pages & npm run build:styles",
+    "watch": "chokidar \"./src/**/*\" -c \"npm run build\"",
+    "start": "npm run watch & npm run serve",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "author": "Adam Davis <adam@admataz.com>",
@@ -15,6 +19,8 @@
     "fsdocs": "^1.1.0"
   },
   "devDependencies": {
+    "chokidar-cli": "^2.1.0",
+    "node-sass": "^4.13.1",
     "node-static": "^0.7.11",
     "nodemon": "^2.0.2"
   }

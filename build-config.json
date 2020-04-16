@@ -1,6 +1,9 @@
 {
     "docs": {
-        "main-nav": "./src/docs/main-nav.md"
+        "main-nav": "./src/docs/main-nav.md",
+        "logo": "./src/docs/logo.md",
+        "logo-topiquiz": "./src/docs/logo-topiquiz.md",
+        "global-footer": "./src/docs/global-footer.md"
     },
     "templates": {
         "html": "./src/templates/html.handlebars",

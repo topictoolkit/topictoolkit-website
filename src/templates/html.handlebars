@@ -16,14 +16,13 @@
   <meta property="og:description" content="{{ docs.page.meta.description }}" />
   <meta property="og:site_name" content="{{site.description}}" />
   {{#if assets.img.[0]}}
-  <meta property="og:image" content="{{site.homePageUrl}}{{outputPath}}{{assets.img.[0]}}"  />
+  <meta property="og:image" content="{{site.homePageUrl}}{{outputPath}}{{assets.img.[0]}}" />
   {{else}}
   <meta property="og:image" content="{{site.itemRoot}}assets/images/logo.png" />
   {{/if}}
-  <link rel="alternate" title="{{site.description}}" type="application/json"
-    href="{{site.feedUrl}}" />
+  <link rel="alternate" title="{{site.description}}" type="application/json" href="{{site.feedUrl}}" />
   <link rel="alternate" type="application/atom+xml" title="Blog" href="{{site.itemRoot}}feed.xml?type=blog" />
-  
+
   <link href="/assets/favicon.png" rel="icon" type="image/png">
 
   <link rel="stylesheet" href="/main.css" />
@@ -35,30 +34,31 @@
 </head>
 
 <body>
-  <div id="top-bar">
-    <div class="logo">
-      {{{docs.logo.body}}}
-    </div>
-    <div class="main-nav">
-      {{{docs.main-nav.body}}}
-    </div>
-  </div>
+  <div id="page-container">
 
+    <header id="top-bar">
+      <div class="logo">
+        <a href="/">{{{docs.logo.body}}}</a>
+      </div>
 
-  <div id="page-content-container">
-    <div id="content-main">
+    </header>
+
+    <main id="page-content-container">
+      <div id="content-main">
         {{{ pageContent }}}
-    </div>
+      </div>
+    </main>
 
-    <div class="main-nav bottom">
-      {{{docs.main-nav.body}}}
-    </div>
+    <footer id="footer-bar">
+      <div class="logo">
+        <a href="/">{{{docs.logo.body}}}</a>
+      </div>
+      <div>
+        {{{docs.global-footer.body}}}
+      </div>
+    </footer>
 
-    <div id="footer-bar">
-      {{docs.global-footer.body}}
-    </div>
   </div>
-
   {{#each assets.js}}
   <script type="text/javascript" src="{{this}}"></script>
   {{/each}}
